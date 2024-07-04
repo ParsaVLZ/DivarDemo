@@ -5,6 +5,7 @@ const {AuthMessage} = require("./auth.messages");
 const {randomInt} = require("crypto");
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
+
 class AuthService {
     #model;
     constructor () {
@@ -29,6 +30,7 @@ class AuthService {
         await user.save();
         return user;
     }
+
     async checkOTP (mobile, code) {
         const user = await this.checkExistByMobile(mobile);
         const now = new Date().getTime();
@@ -42,6 +44,7 @@ class AuthService {
         await user.save();
         return accessToken;
     }
+
     async checkExistByMobile (mobile) {
         const user = await this.#model.findOne({mobile});
         if (!user) throw new createHttpError.NotFound(AuthMessage.NotFound);
@@ -51,4 +54,5 @@ class AuthService {
         return jwt.sign(payload, process.env.JWT_SECRET_KEY, {expiresIn: "1y"});
     }
 }
+
 module.exports = new AuthService();

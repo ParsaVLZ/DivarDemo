@@ -4,6 +4,7 @@ const CategoryMessage = Object.freeze({
     AlreadyExist: "Category already exists!",
     Deleted: "Category deleted successfully!",
 });
+
 module.exports = {
     CategoryMessage
 }
