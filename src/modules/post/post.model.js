@@ -10,11 +10,13 @@ const PostSchema = new Schema({
     city: {type: String, required: false},
     district: {type: String, required: false},
     address: {type: String, required: false},
-    coordinate: {type: [Number], required: true}, //51.215485487, 52.687524154
+    coordinate: {type: [Number], required: true},
     images: {type: [String], required: false, default: []},
     options: {type: Object, default: {}}
 }, {
     timestamps: true
 });
+
 const PostModel = model("post", PostSchema);
+
 module.exports = PostModel;

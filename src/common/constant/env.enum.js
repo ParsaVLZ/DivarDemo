@@ -1,5 +1,5 @@
 const NodeEnv = Object.freeze({
     Production: "production",
-    Developmeny: "development"
+    Development: "development"
 })
 module.exports =  NodeEnv;

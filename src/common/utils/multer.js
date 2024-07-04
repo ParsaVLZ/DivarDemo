@@ -2,6 +2,7 @@ const multer = require('multer');
 const fs = require("fs");
 const path = require('path');
 const createHttpError = require('http-errors');
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         fs.mkdirSync(path.join(process.cwd(), "public", "upload"), {recursive: true});
@@ -14,16 +15,17 @@ const storage = multer.diskStorage({
             const filename = new Date().getTime().toString() + format;
             cb(null, filename);
         } else {
-            cb(new createHttpError.BadRequest("format of pictures are wrong!"));
+            cb(new createHttpError.BadRequest("Format of the pictures are wrong!"));
         }
 
     }
 });
+
 const upload = multer({
     storage,
     limits: {
         fileSize: 3 * 1000 * 1000
-    },
+    }
 });
 module.exports = {
     upload

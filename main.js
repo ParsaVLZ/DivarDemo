@@ -9,9 +9,10 @@ const expressEjsLayouts = require("express-ejs-layouts");
 const moment = require("jalali-moment");
 const methodOverride = require("method-override");
 dotenv.config();
+
 async function main () {
     const app = express();
-    const port = process.env.PORT;
+    const PORT = process.env.PORT;
     require("./src/config/mongoose.config");
     app.use(express.json());
     app.use(express.urlencoded({extended: true}));
@@ -28,8 +29,12 @@ async function main () {
     SwaggerConfig(app);
     NotFoundHandler(app);
     AllExceptionHandler(app);
-    app.listen(port, () => {
-        console.log(`server: http://localhost:${port}`);
+
+    app.listen(PORT, () => {
+        console.log(`server: http://localhost:${PORT}`);
     });
 }
+
 main();
+
+

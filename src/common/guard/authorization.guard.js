@@ -3,6 +3,7 @@ const AuthorizationMessage = require("../messages/auth.message");
 const jwt = require("jsonwebtoken");
 const UserModel = require("../../modules/user/user.model");
 require("dotenv").config();
+
 const Authorization = async (req, res, next) => {
     try {
         const token = req?.cookies?.access_token;
@@ -19,4 +20,5 @@ const Authorization = async (req, res, next) => {
         next(error);
     }
 };
+
 module.exports = Authorization;

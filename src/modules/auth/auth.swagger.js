@@ -2,7 +2,7 @@
  * @swagger
  * tags:
  *  name: Auth
- *  description: Auth Module and Routes
+ *  description: Auth Module & Routes
  */
 
 /**
@@ -48,6 +48,7 @@
  *          200:
  *              description: success
  */
+
 /**
  * @swagger
  * 
@@ -68,6 +69,7 @@
  *          200:
  *              description: success
  */
+
 /**
  * @swagger
  * 

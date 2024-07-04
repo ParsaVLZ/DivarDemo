@@ -7,6 +7,7 @@ const AuthMessage = {
     LoginSuccessfully: "You logged in successfully!",
     LogoutSuccessfully: "Successfuly logged out!"
 }
+
 module.exports = {
     AuthMessage
 }

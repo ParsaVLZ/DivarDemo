@@ -23,7 +23,7 @@
  *                      type: string
  *                  category:
  *                      type: string
- *                  guid:
+ *                  guide:
  *                      type: string
  *                  required:
  *                      type: boolean
@@ -47,7 +47,7 @@
  *                      type: string
  *                  category:
  *                      type: string
- *                  guid:
+ *                  guide:
  *                      type: string
  *                  required:
  *                      type: boolean
@@ -84,6 +84,7 @@
  *          201: 
  *              description: created
  */
+
 /**
  * @swagger
  * /option/{id}:
@@ -103,6 +104,7 @@
  *          201: 
  *              description: created
  */
+
 /**
  * @swagger
  * /option/by-category/{categoryId}:
@@ -118,6 +120,7 @@
  *          200: 
  *              description: successfully
  */
+
 /**
  * @swagger
  * /option/by-category-slug/{slug}:
@@ -133,6 +136,7 @@
  *          200: 
  *              description: successfully
  */
+
 /**
  * @swagger
  * /option/{id}:
@@ -148,6 +152,7 @@
  *          200: 
  *              description: successfully
  */
+
 /**
  * @swagger
  * /option:
@@ -159,6 +164,7 @@
  *          200: 
  *              description: successfully
  */
+
 /**
  * @swagger
  * /option/{id}:
